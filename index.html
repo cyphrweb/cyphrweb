@@ -373,6 +373,19 @@ footer span{color:var(--pk)}
 /* SCROLL PROGRESS BAR */
 #scroll-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--pk),var(--pu),var(--bl));z-index:999;transition:width .1s}
 
+/* INSTAGRAM HIGHLIGHT */
+.ig-highlight{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(255,45,120,.12),rgba(123,47,255,.12),rgba(255,100,0,.1));border:1.5px solid rgba(255,45,120,.5);padding:10px 22px;border-radius:2px;text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.ig-highlight::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,45,120,.08),rgba(123,47,255,.08),rgba(255,100,0,.06));opacity:0;transition:opacity .3s}
+.ig-highlight:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(255,45,120,.3);border-color:rgba(255,45,120,.85)}
+.ig-highlight:hover::before{opacity:1}
+.ig-icon{width:26px;height:26px;flex-shrink:0}
+.ig-text{display:flex;flex-direction:column;text-align:left}
+.ig-handle{font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:.12em;color:#fff;font-weight:700}
+.ig-sub{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:var(--pk);text-transform:uppercase;opacity:.85;margin-top:2px}
+.ig-badge-wrap{margin-top:20px;display:flex;justify-content:center}
+.ig-section-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px}
+.ig-follow-label{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+
 /* TILT CARD EFFECT */
 .r-card,.feat,.prz,.perk,.org-card,.con-card{transform-style:preserve-3d;will-change:transform}
 
@@ -847,6 +860,37 @@ footer{background:linear-gradient(180deg,transparent,rgba(255,45,120,.03))}
     </div>
    
   </div>
+  <!-- Instagram Highlight -->
+  <div class="ig-badge-wrap reveal" style="margin-top:36px;">
+    <div style="text-align:center;">
+      <div style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.25em;color:var(--dim);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:10px;">
+        <span style="flex:1;max-width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--pk));display:inline-block"></span>
+        Follow Us On Instagram
+        <span style="flex:1;max-width:60px;height:1px;background:linear-gradient(90deg,var(--pk),transparent);display:inline-block"></span>
+      </div>
+      <a href="https://instagram.com/cyphrweb" target="_blank" rel="noopener" class="ig-highlight">
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#f09433"/>
+              <stop offset="25%" style="stop-color:#e6683c"/>
+              <stop offset="50%" style="stop-color:#dc2743"/>
+              <stop offset="75%" style="stop-color:#cc2366"/>
+              <stop offset="100%" style="stop-color:#bc1888"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-grad)" stroke-width="2" fill="none"/>
+          <circle cx="12" cy="12" r="4.5" stroke="url(#ig-grad)" stroke-width="2" fill="none"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-grad)"/>
+        </svg>
+        <div class="ig-text">
+          <span class="ig-handle">@cyphrweb</span>
+          <span class="ig-sub">Follow for updates &amp; announcements</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="margin-left:4px;opacity:.6"><path d="M5 12h14M12 5l7 7-7 7" stroke="#ff2d78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -854,6 +898,29 @@ footer{background:linear-gradient(180deg,transparent,rgba(255,45,120,.03))}
     <img src="src/Webxy.png" alt="Vector.ioST (student initiative)" class="footer-logo">
     <div class="footer-webxy-name">Vector.ioST (student initiative)</div>
     <div class="footer-webxy-tagline">Official Organizer · CyphrWeb Hackathon</div>
+  </div>
+  <div class="footer-divider"></div>
+  <div style="margin-bottom:18px;">
+    <a href="https://instagram.com/cyphrweb" target="_blank" rel="noopener" class="ig-highlight" style="display:inline-flex;">
+      <svg class="ig-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ig-grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#f09433"/>
+            <stop offset="25%" style="stop-color:#e6683c"/>
+            <stop offset="50%" style="stop-color:#dc2743"/>
+            <stop offset="75%" style="stop-color:#cc2366"/>
+            <stop offset="100%" style="stop-color:#bc1888"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-grad2)" stroke-width="2" fill="none"/>
+        <circle cx="12" cy="12" r="4.5" stroke="url(#ig-grad2)" stroke-width="2" fill="none"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-grad2)"/>
+      </svg>
+      <div class="ig-text">
+        <span class="ig-handle">@cyphrweb</span>
+        <span class="ig-sub">Instagram · Follow Us</span>
+      </div>
+    </a>
   </div>
   <div class="footer-divider"></div>
   <p>© 2026 <span>CyphrWeb Hackathon</span> — A <span>Vector.ioST (student initiative)</span> Event</p>
